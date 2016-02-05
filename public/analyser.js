@@ -12,24 +12,7 @@ submitButton.addEventListener('click', function() {
   dnaSequenceAnalyser(sequence.toUpperCase());
 });
 
-
-var dnaToRna = function(dnaSequence) {
-  var rnaSequence = ''
-  for (var i = 0; i < dnaSequence.length: i++) {
-    if (dnaSequence[i] === 'A'){
-      rnaSequence += 'U';
-    } else if (dnaSequence[i] === 'T'){
-      rnaSequence += 'A';
-    }else if (dnaSequence[i] === 'G'){
-      rnaSequence += 'C';
-    }else if (dnaSequence[i] === 'C'){
-      rnaSequence += 'G';
-    }
-  }
-  console.log(rnaSequence);
-};
-
 rnaTranslator.addEventListener('click', function() {
   var sequence = dnaInput.value;
-  dnaToRna(sequence);
+  dnaToRna(sequence.toUpperCase());
 });
