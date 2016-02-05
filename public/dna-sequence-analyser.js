@@ -20,6 +20,7 @@ var dnaSequenceAnalyser = function(sequence) {
       numberOfUndefined += 1;
     }
   }
+
   console.log('numberOfA: ', numberOfA);
   console.log('numberOfT: ', numberOfT);
   console.log('numberOfG: ', numberOfG);
