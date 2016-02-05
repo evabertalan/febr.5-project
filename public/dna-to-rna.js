@@ -1,6 +1,6 @@
 var dnaToRna = function(dnaSequence) {
   var rnaSequence = '';
-  console.log(dnaSequence);
+  rowAdder(dnaSequence);
   for (var i = 0; i < dnaSequence.length; i++) {
     if (dnaSequence[i] === 'A'){
       rnaSequence += 'U';
@@ -12,5 +12,5 @@ var dnaToRna = function(dnaSequence) {
       rnaSequence += 'G';
     }
   }
-  console.log(rnaSequence);
+  rowAdder(rnaSequence);
 };

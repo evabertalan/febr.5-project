@@ -16,7 +16,8 @@ var aminoAcidConverter = function(sequence) {
     }
     blockOfThree = '';
   }
-  console.log(aminoAcidSequence);
-  console.log(molecularWeight/1000, 'kDa');
+  // rowAdder(aminoAcidSequence);
+  aminoAcidHandler(aminoAcidSequence);
+  rowAdder(molecularWeight/1000);
 };
 

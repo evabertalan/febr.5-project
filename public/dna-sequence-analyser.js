@@ -6,7 +6,7 @@ var dnaSequenceAnalyser = function(sequence) {
   var numberOfUndefined = 0;
 
   var sequenceLength = sequence.length;
-  console.log(sequenceLength);
+  rowAdder(sequenceLength)
   for (var i = 0; i < sequence.length; i++) {
     if (sequence[i] === 'A') {
       numberOfA += 1;
@@ -20,16 +20,7 @@ var dnaSequenceAnalyser = function(sequence) {
       numberOfUndefined += 1;
     }
   }
-
-  console.log('numberOfA: ', numberOfA);
-  console.log('numberOfT: ', numberOfT);
-  console.log('numberOfG: ', numberOfG);
-  console.log('numberOfC: ', numberOfC);
-  console.log('numberOfUndefined: ',numberOfUndefined);
-  console.log('*'*20);
-  console.log('percent numberOfA: ', (numberOfA/sequenceLength)*100);
-  console.log('percent numberOfT: ', (numberOfT/sequenceLength)*100);
-  console.log('percent numberOfG: ', (numberOfG/sequenceLength)*100);
-  console.log('percent numberOfC: ', (numberOfC/sequenceLength)*100);
-  console.log('percent numberOfUndefined: ',(numberOfUndefined/sequenceLength)*100);
+  createTable(['A', 'T', 'G', 'C']);
+  createCells([numberOfA, numberOfT, numberOfG, numberOfC]);
+  createCells([(numberOfA/sequenceLength)*100, (numberOfT/sequenceLength)*100, (numberOfG/sequenceLength)*100, (numberOfC/sequenceLength)*100]);
 };
