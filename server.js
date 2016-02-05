@@ -33,10 +33,12 @@ app.get('/aminoacids', function(req, res) {
   });
 });
 
-app.post('/aminoacids', function (req, res) {
-  aminoacids.add(req.body, function(err, result) {
-    res.json({
-      result: result
-    });
+app.get('/aminoacids/:amino_letter', function(req, res) {
+  aminoacids.select(req.params.amino_letter, function(err, result){
+    if (err){
+      res.json({status: 'not exists'});
+    } else {
+      res.json(result);
+    }
   });
 });

@@ -16,8 +16,7 @@ var aminoAcidConverter = function(sequence) {
     }
     blockOfThree = '';
   }
-  // rowAdder(aminoAcidSequence);
-  aminoAcidHandler(aminoAcidSequence);
+  sequenceHandler(aminoAcidSequence);
   rowAdder(molecularWeight/1000);
 };
 
